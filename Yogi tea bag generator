@@ -1,35 +1,28 @@
 import random
 phrases = [1,2,3,4,5,6]
 
-nouns1=['light','breath','spirit']
+#can be preceded by an adjective
+nouns1=['light','compassion','happiness','joy','wisdom','patience', 'energy']
 noun1=str(random.choice(nouns1))
 
-nouns2=['flower','wave','tree']
+nouns2=['life','a wave', 'love', 'an aura','tranquility', 'bliss','the soul','the spirit','the breath']
 noun2=str(random.choice(nouns2))
 
-verbs=['shine','vibrate','quiver','melt']
+verbs=['shine','vibrate','love','live','surrender', 'rejoice']
 verb=str(random.choice(verbs))
 
-adjectives=['a luminous','a glowing','a placid']
+adjectives=['luminous','glowing','joyful','blissful','righteous','patience']
 adjective=str(random.choice(adjectives))
-
-substances=['soul','moon','water','breeze','starlight']
-substance=str(random.choice(substances))
-
-places=['Universe','Earth','forest','heavens']
-place=str(random.choice(places))
 
 phrase = random.choice(phrases)
 if phrase==1:
-    print("River of Blood")
+    print(noun1 + " is "+ noun2)
 elif phrase==2:
-    print("Be the "+noun1+", be the "+noun2)
+    print("Be "+noun1+", be "+noun2)
 elif phrase==3:
-    print("The "+noun1+" is inside you, and you are the "+noun2)
+    print(noun1+" is inside you, and you are "+noun2)
 elif phrase==4:
-    print(verb+" like "+adjective+" "+noun2+" of "+substance)
-elif phrase==5:
-    print("You are the "+substance+" of the "+place)
+    print(verb + " with "+adjective+ " " + noun1)
 elif phrase==6:
     print("You're already dead.")
     
