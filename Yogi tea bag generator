@@ -1,28 +1,51 @@
-import random
-phrases = [1,2,3,4,5,6]
+# -*- coding: utf-8 -*-
+"""
+Created on Tue May 21 16:35:14 2019
 
-#can be preceded by an adjective
-nouns1=['light','compassion','happiness','joy','wisdom','patience', 'energy']
-noun1=str(random.choice(nouns1))
+@author: Alma
+"""
+#initial population: random phrase templates comprised of random parts of speech,
+    #original data from AKMB and a box of Wellness tea, with minor grammatical edits
+#fitness function and selection: user eliminates the ones they like least
+#crossover: matching phrases swap one part of speech
+#mutation: replace one item in a part of speech list with a synonym?
 
-nouns2=['life','a wave', 'love', 'an aura','tranquility', 'bliss','the soul','the spirit','the breath']
-noun2=str(random.choice(nouns2))
+import random as r
+phrases = [1,2,3,4,5,6,7,8]
 
-verbs=['shine','vibrate','love','live','surrender', 'rejoice']
-verb=str(random.choice(verbs))
+#can be preceded by 'an' or 'the'
+nouns1=['an aura','an accomplishment']
+#noun1=str(random.choice(nouns1))
 
-adjectives=['luminous','glowing','joyful','blissful','righteous','patience']
-adjective=str(random.choice(adjectives))
+#abstract nouns
+nouns2=['respect','compassion','kindness','strength','belief','light', 'love','happiness','love','love','everything','trust']
+#noun2 = str(random.choice(nouns2))
 
-phrase = random.choice(phrases)
+adverbs=['righteously',]
+#adverb=str(random.choice(adverbs))
+
+verbs=['live','live', 'love', 'love','speak','speak','speak','intend','intend','respect']
+#verb=str(random.choice(verbs))
+
+adjectives=['happy']
+#adjective=str(random.choice(adjectives))
+
+phrase = r.choice(phrases)
 if phrase==1:
-    print(noun1 + " is "+ noun2)
-elif phrase==2:
-    print("Be "+noun1+", be "+noun2)
+    print(f"{r.choice(verbs)} {r.choice(adverbs)}; you will build up {r.choice(nouns1)} of {r.choice(nouns2)}")
+if phrase==2:
+    print(f"{r.choice(verbs)} to make yourself {r.choice(adjectives)}")
 elif phrase==3:
-    print(noun1+" is inside you, and you are "+noun2)
+    print(f"{r.choice(nouns2)} is {r.choice(nouns1)}")
 elif phrase==4:
-    print(verb + " with "+adjective+ " " + noun1)
+    print(f"It is not to talk of {r.choice(nouns2)} but to {r.choice(verbs)} {r.choice(nouns2)} that is {r.choice(nouns2)}")
+elif phrase==5:
+    print(f"{r.choice(nouns2)} is for now, {r.choice(nouns2)} is for the future")
 elif phrase==6:
-    print("You're already dead.")
-    
+    print(f"{r.choice(verbs)} what you {r.choice(verbs)}, {r.choice(verbs)} what you {r.choice(verbs)}")
+elif phrase==7:
+    print(f"Your {r.choice(nouns2)} is your own {r.choice(nouns2)}")
+elif phrase==8:
+    print(f"{r.choice(nouns2)} has no limit, {r.choice(nouns2)} has no enemy")
+elif phrase==9:
+    print(f"{r.choice(verbs)} yourself so that you may know to to {r.choice(verbs)} with {r.choice(nouns2)}")
