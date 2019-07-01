@@ -11,23 +11,23 @@ Created on Tue May 21 16:35:14 2019
 #mutation: replace one item in a part of speech list with a synonym?
 
 import random as r
-phrases = [1,2,3,4,5,6,7,8]
+phrases = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
 
 #can be preceded by 'an' or 'the'
-nouns1=['an aura','an accomplishment']
+nouns1=['an aura','an accomplishment','the love']
 #noun1=str(random.choice(nouns1))
 
 #abstract nouns
-nouns2=['respect','compassion','kindness','strength','belief','light', 'love','happiness','love','love','everything','trust']
+nouns2=['respect','compassion','kindness','love','life','love','knowledge','strength','compassion','generosity','love','goodness','compassion','kindness','strength','belief','light', 'love','happiness','love','love','everything','trust']
 #noun2 = str(random.choice(nouns2))
 
 adverbs=['righteously',]
 #adverb=str(random.choice(adverbs))
 
-verbs=['live','live', 'love', 'love','speak','speak','speak','intend','intend','respect']
+verbs=['live','live', 'love','love','live', 'love','love','speak','speak','speak','create','intend','intend','respect']
 #verb=str(random.choice(verbs))
 
-adjectives=['happy']
+adjectives=['happy','good','compassionate','giving','forgiving','loving','compassionate','giving']
 #adjective=str(random.choice(adjectives))
 
 phrase = r.choice(phrases)
@@ -49,3 +49,23 @@ elif phrase==8:
     print(f"{r.choice(nouns2)} has no limit, {r.choice(nouns2)} has no enemy")
 elif phrase==9:
     print(f"{r.choice(verbs)} yourself so that you may know to to {r.choice(verbs)} with {r.choice(nouns2)}")
+elif phrase==10:
+    print(f"You don't need {r.choice(nouns2)} if you are {r.choice(nouns2)}")
+elif phrase==11:
+    print(f"{r.choice(verbs)} the sequence of {r.choice(nouns2)}, the consequences will always be {r.choice(adjectives)}")
+elif phrase==12:
+    print(f"People who {r.choice(verbs)} are {r.choice(adjectives)}")
+elif phrase==13:
+    print(f"Be {r.choice(adjectives)}")
+elif phrase==14: 
+    print(f"{r.choice(nouns2)} is the constant state of {r.choice(nouns2)} for others")
+elif phrase==15:
+    print(f"{r.choice(verbs)} by your inner {r.choice(nouns2)}")
+elif phrase==16:
+    print(f"Develop the power of {r.choice(nouns2)}")
+elif phrase==17:
+    print(f"People who {r.choice(verbs)} are {r.choice(adjectives)}")
+elif phrase==18:
+    print(f"The principal ingredient of {r.choice(nouns2)} is {r.choice(nouns2)}")
+
+    
