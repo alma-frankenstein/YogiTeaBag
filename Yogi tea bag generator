@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import random as r
-phrases = list(range(1,19))
+phrases = list(range(1,20))
 phrase = r.choice(phrases)
 
 partsOfSpeech = {'nouns1':['an aura','an accomplishment','the love'], 
@@ -47,5 +47,7 @@ elif phrase==17:
     print(f"People who {r.choice(partsOfSpeech['verbs'])} are {r.choice(partsOfSpeech['adjectives'])}")
 elif phrase==18:
     print(f"The principal ingredient of {r.choice(partsOfSpeech['nouns2'])} is {r.choice(partsOfSpeech['nouns2'])}")
+elif phrase==19:
+    print("You're already dead.")
 
     
