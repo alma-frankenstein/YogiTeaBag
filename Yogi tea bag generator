@@ -1,71 +1,51 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Tue May 21 16:35:14 2019
-
-@author: Alma
-"""
-#initial population: random phrase templates comprised of random parts of speech,
-    #original data from AKMB and a box of Wellness tea, with minor grammatical edits
-#fitness function and selection: user eliminates the ones they like least
-#crossover: matching phrases swap one part of speech
-#mutation: replace one item in a part of speech list with a synonym?
 
 import random as r
-phrases = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-
-#can be preceded by 'an' or 'the'
-nouns1=['an aura','an accomplishment','the love']
-#noun1=str(random.choice(nouns1))
-
-#abstract nouns
-nouns2=['respect','compassion','kindness','love','life','love','knowledge','strength','compassion','generosity','love','goodness','compassion','kindness','strength','belief','light', 'love','happiness','love','love','everything','trust']
-#noun2 = str(random.choice(nouns2))
-
-adverbs=['righteously',]
-#adverb=str(random.choice(adverbs))
-
-verbs=['live','live', 'love','love','live', 'love','love','speak','speak','speak','create','intend','intend','respect']
-#verb=str(random.choice(verbs))
-
-adjectives=['happy','good','compassionate','giving','forgiving','loving','compassionate','giving']
-#adjective=str(random.choice(adjectives))
-
+phrases = list(range(1,19))
 phrase = r.choice(phrases)
+
+partsOfSpeech = {'nouns1':['an aura','an accomplishment','the love'], 
+                 'nouns2':['respect','compassion','kindness','love','life','love','knowledge','strength','compassion','generosity','love','goodness','compassion','kindness','strength','belief','light', 'love','happiness','love','love','everything','trust'],
+                 'adverbs':['righteously'], 
+                 'verbs':['live','live', 'love','love','live', 'love','love','speak','speak','speak','create','intend','intend','respect'],
+                 'adjectives':['happy','good','compassionate','giving','forgiving','loving','compassionate','giving']}
+
 if phrase==1:
-    print(f"{r.choice(verbs)} {r.choice(adverbs)}; you will build up {r.choice(nouns1)} of {r.choice(nouns2)}")
+    print(f"{r.choice(partsOfSpeech['verbs'])} {r.choice(partsOfSpeech['adverbs'])}; you will build up {r.choice(partsOfSpeech['nouns1'])} of {r.choice(partsOfSpeech['nouns2'])}")
 if phrase==2:
-    print(f"{r.choice(verbs)} to make yourself {r.choice(adjectives)}")
+    print(f"{r.choice(partsOfSpeech['verbs'])} to make yourself {r.choice(partsOfSpeech['adjectives'])}")
 elif phrase==3:
-    print(f"{r.choice(nouns2)} is {r.choice(nouns1)}")
+    print(f"{r.choice(partsOfSpeech['nouns2'])} is {r.choice(partsOfSpeech['nouns1'])}")
 elif phrase==4:
-    print(f"It is not to talk of {r.choice(nouns2)} but to {r.choice(verbs)} {r.choice(nouns2)} that is {r.choice(nouns2)}")
+    print(f"It is not to talk of {r.choice(partsOfSpeech['nouns2'])} but to {r.choice(partsOfSpeech['verbs'])} {r.choice(partsOfSpeech['nouns2'])} that is {r.choice(partsOfSpeech['nouns2'])}")
 elif phrase==5:
-    print(f"{r.choice(nouns2)} is for now, {r.choice(nouns2)} is for the future")
+    print(f"{r.choice(partsOfSpeech['nouns2'])} is for now, {r.choice(partsOfSpeech['nouns2'])} is for the future")
 elif phrase==6:
-    print(f"{r.choice(verbs)} what you {r.choice(verbs)}, {r.choice(verbs)} what you {r.choice(verbs)}")
+    print(f"{r.choice(partsOfSpeech['verbs'])} what you {r.choice(partsOfSpeech['verbs'])}, {r.choice(partsOfSpeech['verbs'])} what you {r.choice(partsOfSpeech['verbs'])}")
 elif phrase==7:
-    print(f"Your {r.choice(nouns2)} is your own {r.choice(nouns2)}")
+    print(f"Your {r.choice(partsOfSpeech['nouns2'])} is your own {r.choice(partsOfSpeech['nouns2'])}")
 elif phrase==8:
-    print(f"{r.choice(nouns2)} has no limit, {r.choice(nouns2)} has no enemy")
+    print(f"{r.choice(partsOfSpeech['nouns2'])} has no limit, {r.choice(partsOfSpeech['nouns2'])} has no enemy")
 elif phrase==9:
-    print(f"{r.choice(verbs)} yourself so that you may know to to {r.choice(verbs)} with {r.choice(nouns2)}")
+    print(f"{r.choice(partsOfSpeech['verbs'])} yourself so that you may know to to {r.choice(partsOfSpeech['verbs'])} with {r.choice(partsOfSpeech['nouns2'])}")
 elif phrase==10:
-    print(f"You don't need {r.choice(nouns2)} if you are {r.choice(nouns2)}")
+    print(f"You don't need {r.choice(partsOfSpeech['nouns2'])} if you are {r.choice(partsOfSpeech['nouns2'])}")
 elif phrase==11:
-    print(f"{r.choice(verbs)} the sequence of {r.choice(nouns2)}, the consequences will always be {r.choice(adjectives)}")
+    print(f"{r.choice(partsOfSpeech['verbs'])} the sequence of {r.choice(partsOfSpeech['nouns2'])}, the consequences will always be {r.choice(partsOfSpeech['adjectives'])}")
 elif phrase==12:
-    print(f"People who {r.choice(verbs)} are {r.choice(adjectives)}")
+    print(f"People who {r.choice(partsOfSpeech['verbs'])} are {r.choice(partsOfSpeech['adjectives'])}")
 elif phrase==13:
-    print(f"Be {r.choice(adjectives)}")
+    print(f"Be {r.choice(partsOfSpeech['adjectives'])}")
 elif phrase==14: 
-    print(f"{r.choice(nouns2)} is the constant state of {r.choice(nouns2)} for others")
+    print(f"{r.choice(partsOfSpeech['nouns2'])} is the constant state of {r.choice(partsOfSpeech['nouns2'])} for others")
 elif phrase==15:
-    print(f"{r.choice(verbs)} by your inner {r.choice(nouns2)}")
+    print(f"{r.choice(partsOfSpeech['verbs'])} by your inner {r.choice(partsOfSpeech['nouns2'])}")
 elif phrase==16:
-    print(f"Develop the power of {r.choice(nouns2)}")
+    print(f"Develop the power of {r.choice(partsOfSpeech['nouns2'])}")
 elif phrase==17:
-    print(f"People who {r.choice(verbs)} are {r.choice(adjectives)}")
+    print(f"People who {r.choice(partsOfSpeech['verbs'])} are {r.choice(partsOfSpeech['adjectives'])}")
 elif phrase==18:
-    print(f"The principal ingredient of {r.choice(nouns2)} is {r.choice(nouns2)}")
+    print(f"The principal ingredient of {r.choice(partsOfSpeech['nouns2'])} is {r.choice(partsOfSpeech['nouns2'])}")
 
     
