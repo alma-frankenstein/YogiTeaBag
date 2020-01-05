@@ -38,7 +38,8 @@ phraseDict = {
 15: f"{r.choice(partsOfSpeech['verbs'])} by your inner {r.choice(partsOfSpeech['nouns2'])}",
 16: f"Develop the power of {r.choice(partsOfSpeech['nouns2'])}",
 17: f"People who {r.choice(partsOfSpeech['verbs'])} are {r.choice(partsOfSpeech['adjectives'])}",
-18: f"The principal ingredient of {r.choice(partsOfSpeech['nouns2'])} is {r.choice(partsOfSpeech['nouns2'])}"
+18: f"The principal ingredient of {r.choice(partsOfSpeech['nouns2'])} is {r.choice(partsOfSpeech['nouns2'])}",
+19: "You're already dead"
     }
 
 phrases = list(range(1,len(phraseDict)+1))
