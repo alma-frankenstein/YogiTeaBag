@@ -1,13 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Jan  4 19:23:10 2020
-
-@author: alma
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import random as r
 
