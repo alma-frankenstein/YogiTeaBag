@@ -2,9 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import random as r
-
-def teaBagger():
-    print(phraseDict[phraseKey])
     
 partsOfSpeech = {'nouns1':['an aura','an accomplishment','the love'], 
                  'nouns2':['respect','compassion','kindness','love','life','love','knowledge','strength','compassion','generosity','love','goodness','compassion','kindness','strength','belief','light', 'love','happiness','love','love','everything','trust'],
@@ -37,5 +34,8 @@ phraseDict = {
 phrases = list(range(1,len(phraseDict)+1))
 phraseKey = r.choice(phrases)
 
+def teaBagger():
+    print(phraseDict[phraseKey])
+    
 teaBagger()
 
