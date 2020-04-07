@@ -66,8 +66,8 @@ def teaBagger():
     sentence=phraseDict[phraseKey]
     return render_template('teasite.jinja2', sentence=sentence)
 
-
-app.run()
+if __name__=='__main__':
+    app.run()
 
 # eventually:
 # TODO make favicon

@@ -10,6 +10,7 @@ partsOfSpeech = {'nouns1':['an aura','an accomplishment','the love'],
                  'adjectives':['happy','good','compassionate','giving','forgiving','loving','compassionate','giving']
                  }
 phraseDict = {
+0: f"Your greatest strength is love",
 1: f"{r.choice(partsOfSpeech['verbs'])} {r.choice(partsOfSpeech['adverbs'])}; you will build up {r.choice(partsOfSpeech['nouns1'])} of {r.choice(partsOfSpeech['nouns2'])}",
 2: f"{r.choice(partsOfSpeech['verbs'])} to make yourself {r.choice(partsOfSpeech['adjectives'])}",
 3: f"{r.choice(partsOfSpeech['nouns2'])} is {r.choice(partsOfSpeech['nouns1'])}",
@@ -31,7 +32,7 @@ phraseDict = {
 19: "You're already dead"
     }
 
-phrases = list(range(1,len(phraseDict)+1))
+phrases = list(range(len(phraseDict)))
 phraseKey = r.choice(phrases)
 
 def teaBagger():
