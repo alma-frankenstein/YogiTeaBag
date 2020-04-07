@@ -15,15 +15,20 @@ body {
 </style>
 
 </head>
+
 <body>
     <h2>Your Daily Teabag Platitude</h2>
     <p>{{  sentence  }}</p>
-    <button type="submit"  onClick="refreshPage()">New Teabag</button>
+    <div>
+        <input type="button" value="new teabag" onClick="refreshPage()" style="display: block; margin: 0 auto;">
+    </div>
+
 <script>
 function refreshPage(){
     window.location.reload();
 }
 </script>
+
 </body>
 </html>
 
