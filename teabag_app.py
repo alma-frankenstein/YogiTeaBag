@@ -2,18 +2,19 @@
 
 from flask import Flask, render_template
 import random as r
+import os
 
 app = Flask(__name__)
 
-partsOfSpeech = {'nouns1': ['an aura', 'an accomplishment', 'the love'],
-                 'nouns2': ['respect', 'compassion', 'kindness', 'love', 'life', 'love', 'knowledge', 'strength',
-                            'compassion', 'generosity', 'love', 'goodness', 'compassion', 'kindness', 'strength',
-                            'belief', 'light', 'love', 'happiness', 'love', 'love', 'everything', 'trust'],
-                 'adverbs': ['righteously'],
-                 'verbs': ['live', 'live', 'love', 'love', 'live', 'love', 'love', 'speak', 'speak', 'speak', 'create',
+partsOfSpeech = {'nouns1': ['an aura', 'an accomplishment', 'the love', 'the life', 'the soul'],
+                 'nouns2': ['respect', 'compassion', 'kindness', 'love', 'life', 'knowledge', 'strength',
+                            'generosity', 'love', 'goodness', 'strength',
+                            'belief', 'light', 'love', 'happiness', 'love', 'love', 'everything', 'trust', 'heart'],
+                 'adverbs': ['righteously', 'sincerely'],
+                 'verbs': ['live', 'sing', 'love', 'love', 'live', 'love', 'love', 'give', 'speak', 'speak', 'create',
                            'intend', 'intend', 'respect'],
-                 'adjectives': ['happy', 'good', 'compassionate', 'giving', 'forgiving', 'loving', 'compassionate',
-                                'giving']
+                 'adjectives': ['happy', 'sacred', 'good', 'compassionate', 'giving', 'forgiving', 'loving', 'joyful',
+                                'sincere']
                  }
 phraseDict = {
     0: f"You are {r.choice(partsOfSpeech['adjectives'])}",
@@ -59,17 +60,15 @@ phraseDict = {
     40: f"{r.choice(partsOfSpeech['nouns1']).title()} of {r.choice(partsOfSpeech['nouns2'])}",
 }
 
-@app.route('/teabag')  # endpoint of domain name
+
+@app.route('/')  # endpoint of domain name
 def teaBagger():
     phrases = list(range(len(phraseDict)))
     phraseKey = r.choice(phrases)
-    sentence=phraseDict[phraseKey]
+    sentence = phraseDict[phraseKey]
     return render_template('teasite.jinja2', sentence=sentence)
 
-if __name__=='__main__':
-    app.run()
 
-# eventually:
-# TODO make favicon
-# TODO deploy with heroku
-# TODO style with CSS
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
