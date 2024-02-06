@@ -1,5 +1,5 @@
 
-# therapyMarkov
+# Tea Bag Platitude Generator
 
 #### Created by Alma Frankenstein
 
